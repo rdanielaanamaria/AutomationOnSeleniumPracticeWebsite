@@ -21,6 +21,6 @@ public class BaseClass {
     }
     @AfterMethod (alwaysRun = true)
         public void closeSetup(){
-//        driver.quit();
+        driver.quit();
     }
 }
