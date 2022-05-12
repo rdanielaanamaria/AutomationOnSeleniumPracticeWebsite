@@ -10,6 +10,7 @@ public class SimpleRegistrationPage {
     By emailField = By.id("email");
     By passwordField = By.id("password");
     By registerButton = By.id("submit");
+    By successfulMessage = By.xpath("//span[@class='title']");
 
 
 
@@ -26,6 +27,9 @@ public class SimpleRegistrationPage {
     }
     public void clickRegister(){
         driver.findElement(registerButton).click();
+    }
+    public void giveSuccessfulMessage(){
+        driver.findElement(successfulMessage).isEnabled();
     }
 
 }

@@ -10,6 +10,8 @@ public class AllTheTestsHere extends BaseClass{
         simpleRegistrationPage.typeEmail(Constants.EMAIL);
         simpleRegistrationPage.typePassword(Constants.PASSWORD);
         simpleRegistrationPage.clickRegister();
+        simpleRegistrationPage.giveSuccessfulMessage();
+        System.out.println(Constants.SUCCESSFUL_MESSAGE + " on Simple Registration Page");
     }
 
     @Test
@@ -21,6 +23,8 @@ public class AllTheTestsHere extends BaseClass{
         radioButtonFormPage.typeDescription(Constants.DESCRIPTION);
         radioButtonFormPage.checkRadioButton();
         radioButtonFormPage.clickRegister();
+        radioButtonFormPage.giveSuccessfulMessage();
+        System.out.println(Constants.SUCCESSFUL_MESSAGE + " on Radio Button Form Page");
     }
 
     @Test
@@ -33,6 +37,8 @@ public class AllTheTestsHere extends BaseClass{
         reservationFormPage.checkReservation();
         reservationFormPage.checkInclusive();
         reservationFormPage.sendReservationRequest();
+        reservationFormPage.giveSuccessfulMessage();
+        System.out.println(Constants.SUCCESSFUL_MESSAGE + " on Reservation Form Page");
     }
 
     @Test
@@ -46,6 +52,8 @@ public class AllTheTestsHere extends BaseClass{
         dropdownFormPage.clickOnSingleSelectButton();
         dropdownFormPage.clickOnSelectOtherOptions();
         dropdownFormPage.clickOnSubmitButton();
+        dropdownFormPage.giveSuccessfulMessage();
+        System.out.println(Constants.SUCCESSFUL_MESSAGE + " on Dropdown Form Page");
     }
 
     @Test
@@ -54,7 +62,11 @@ public class AllTheTestsHere extends BaseClass{
         DatePickerPage datePickerPage = new DatePickerPage(driver);
 
         datePickerPage.chooseDate();
+        datePickerPage.chooseRangeDate();
+        datePickerPage.emptyClick();
         datePickerPage.clickOnSubmitButton();
+        datePickerPage.giveSuccessfulMessage();
+        System.out.println(Constants.SUCCESSFUL_MESSAGE + " on Date Picker Form");
     }
 
     @Test
@@ -64,5 +76,7 @@ public class AllTheTestsHere extends BaseClass{
 
         fileUploadPage.chooseFile();
         fileUploadPage.submitFile();
+        fileUploadPage.giveSuccessfulMessage();
+        System.out.println(Constants.SUCCESSFUL_MESSAGE + " on File Upload Page");
     }
 }

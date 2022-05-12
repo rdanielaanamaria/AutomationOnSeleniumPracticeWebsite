@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ReservationFormPage {
@@ -12,6 +13,7 @@ public class ReservationFormPage {
     By reservationField = By.xpath("//div[@class='form-check'][1]");
     By inclusiveField = By.xpath("//nb-checkbox[@value='breakfast']/label/span");
     By sendRequest = By.id("submit");
+    By successfulMessage = By.xpath("//span[@class='title']");
 
 
     public ReservationFormPage(WebDriver driver){
@@ -33,6 +35,9 @@ public class ReservationFormPage {
     }
     public void sendReservationRequest(){
         driver.findElement(sendRequest).click();
+    }
+    public void giveSuccessfulMessage(){
+        driver.findElement(successfulMessage).isEnabled();
     }
 
 }

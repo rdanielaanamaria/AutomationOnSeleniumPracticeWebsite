@@ -11,6 +11,7 @@ public class RadioButtonFormPage {
     By descriptionField = By.id("description");
     By radioButton = By.xpath("//div[@class='form-check'][3]");
     By registerButton = By.id("submit");
+    By successfulMessage = By.xpath("//span[@class='title']");
 
     public RadioButtonFormPage(WebDriver driver){
         this.driver = driver;
@@ -28,5 +29,8 @@ public class RadioButtonFormPage {
     }
     public void clickRegister(){
         driver.findElement(registerButton).click();
+    }
+    public void giveSuccessfulMessage(){
+        driver.findElement(successfulMessage).isEnabled();
     }
 }

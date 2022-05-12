@@ -11,7 +11,8 @@ public class Constants {
     public static final String COMMENT = "I would like a king bed";
     public static final String DROPDOWN_FORM = "https://rori4.github.io/selenium-practice/#/pages/practice/dropdown-form";
     public static final CharSequence DATE_PICKER = "May 30, 2022";
-    public static final CharSequence DATE_RANGE = "May 30, 2022 - Iun 20, 2022";
+    public static final CharSequence DATE_RANGE = "May 20, 2022 - May 30, 2022";
     public static final String DATE_PICKER_FORM = "https://rori4.github.io/selenium-practice/#/pages/practice/datepicker-form";
     public static final String FILE_UPLOAD_FORM = "https://rori4.github.io/selenium-practice/#/pages/practice/file-form";
+    public static final String SUCCESSFUL_MESSAGE = "The message 'Successfully passed' was displayed";
 }

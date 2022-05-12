@@ -17,6 +17,7 @@ public class DropdownFormPage {
     By selectOtherOptions = By.xpath("//select[@formcontrolname='select4']");
     By otherOptionsChoice = By.xpath("//option[@value='audi']");
     By submitButton = By.id("submit");
+    By successfulMessage = By.xpath("//span[@class='title']");
 
     public DropdownFormPage(WebDriver driver){
         this.driver = driver;
@@ -44,6 +45,9 @@ public class DropdownFormPage {
     }
     public void clickOnSubmitButton(){
         driver.findElement(submitButton).click();
+    }
+    public void giveSuccessfulMessage(){
+        driver.findElement(successfulMessage).isEnabled();
     }
 
 }

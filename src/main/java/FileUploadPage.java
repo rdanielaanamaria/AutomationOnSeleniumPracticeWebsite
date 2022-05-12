@@ -8,16 +8,19 @@ public class FileUploadPage {
 
     By chooseFileButton = By.xpath("//input[@formcontrolname='file']");
     By submitButton = By.id("submit");
+    By successfulMessage = By.xpath("//span[@class='title']");
 
     public FileUploadPage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, 5);
     }
     public void chooseFile(){
-        driver.findElement(chooseFileButton).sendKeys("AutomationOnSeleniumPracticeWebsite/src/main/resources/tasha" +
-                ".jpg");
+        driver.findElement(chooseFileButton).sendKeys("D:\\Workspace\\AutomationOnSeleniumPracticeWebsite\\src\\main\\resources\\tasha.jpg");
     }
     public void submitFile(){
         driver.findElement(submitButton).click();
+    }
+    public void giveSuccessfulMessage(){
+        driver.findElement(successfulMessage).isEnabled();
     }
 }
